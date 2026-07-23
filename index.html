@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#244f67" />
+  <title>פולין 2026 | משפחת דורי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <nav class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="פתיחת תפריט">☰</button>
+      <div class="brand">POLAND 2026</div>
+      <button class="icon-btn" id="themeBtn" aria-label="מצב לילה">◐</button>
+    </nav>
+
+    <div class="hero-content">
+      <span class="eyebrow">המסע המשפחתי שלנו</span>
+      <h1>פולין וסלובקיה<br><span>משפחת דורי</span></h1>
+      <p>30.7–12.8.2026 · 8 מטיילים · הרים, טבע וזיכרונות</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#days">למסלול המתוכנן</a>
+        <a class="btn glass" href="https://www.google.com/maps" target="_blank" rel="noopener">פתיחת המפה</a>
+      </div>
+    </div>
+  </header>
+
+  <aside class="drawer" id="drawer">
+    <button class="close-drawer" id="closeDrawer">×</button>
+    <h2>ניווט מהיר</h2>
+    <a href="#today">היום הבא</a>
+    <a href="#days">לוח המסע</a>
+    <a href="#packing">רשימת ציוד</a>
+    <a href="#kosher">כשרות ושבת</a>
+    <a href="#important">מידע חשוב</a>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <main>
+    <section class="section intro" id="today">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">במבט אחד</span>
+          <h2>היום הבא</h2>
+        </div>
+        <span class="status">מסלול ראשוני</span>
+      </div>
+
+      <article class="today-card">
+        <div class="today-date">
+          <span>יום חמישי</span>
+          <strong>30</strong>
+          <span>יולי</span>
+        </div>
+        <div class="today-main">
+          <span class="pill">יום 1</span>
+          <h3>נחיתה בקרקוב ונסיעה להרים</h3>
+          <p>נחיתה, איסוף רכב, הצטיידות ראשונית ונסיעה רגועה לדירה באזור קושצ'ליסקו.</p>
+          <div class="timeline compact">
+            <div><b>08:00</b><span>נחיתה בקרקוב</span></div>
+            <div><b>09:30</b><span>איסוף רכב</span></div>
+            <div><b>11:00</b><span>קניות והצטיידות</span></div>
+            <div><b>15:00</b><span>כניסה לדירה</span></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section soft" id="days">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">גמיש ומשתנה</span>
+          <h2>לוח המסע</h2>
+        </div>
+        <p class="small-note">לחצי על כל יום לפתיחת הפרטים</p>
+      </div>
+
+      <div class="days-grid" id="daysGrid"></div>
+    </section>
+
+    <section class="section" id="packing">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">לפני שיוצאים</span>
+          <h2>רשימת ציוד</h2>
+        </div>
+        <button class="text-btn" id="resetPacking">איפוס סימונים</button>
+      </div>
+      <div class="checklist" id="packingList"></div>
+    </section>
+
+    <section class="section soft" id="kosher">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">שקט נפשי</span>
+          <h2>כשרות ושבת</h2>
+        </div>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <span class="info-icon">✡</span>
+          <h3>שבת בקרקוב</h3>
+          <p>ריכוז כתובת הלינה, זמני תפילות, עירוב, סעודות ומרחקי הליכה.</p>
+          <button class="link-btn" data-toast="הקישור יתווסף לאחר סגירת הלינה">לפרטים</button>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">🍽</span>
+          <h3>אוכל כשר</h3>
+          <p>מסעדות, בית חב"ד, סופרמרקטים ומוצרים שכדאי להביא מהארץ.</p>
+          <button class="link-btn" data-toast="הרשימה תעודכן לפי המסלול הסופי">לרשימה</button>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">🕯</span>
+          <h3>זמני שבת</h3>
+          <p>כניסת שבת, יציאה, הדלקת נרות ותזכורת להתארגנות מוקדמת.</p>
+          <button class="link-btn" data-toast="הזמנים יתווספו סמוך לנסיעה">לזמנים</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="important">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">הכול במקום אחד</span>
+          <h2>מידע חשוב</h2>
+        </div>
+      </div>
+      <div class="quick-links">
+        <button data-toast="כרטיסי הטיסה יתווספו כאן">✈️ כרטיסי טיסה</button>
+        <button data-toast="פוליסת הביטוח תתווסף כאן">🛡 ביטוח נסיעות</button>
+        <button data-toast="פרטי הרכב יתווספו כאן">🚗 רכב שכור</button>
+        <button data-toast="כתובות הלינה יתווספו כאן">🏡 מקומות לינה</button>
+        <button data-toast="מספרי חירום יתווספו כאן">☎️ מספרי חירום</button>
+        <button data-toast="קישורי ההזמנות יתווספו כאן">🎟 הזמנות</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="dayModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>
+    <strong>משפחת דורי · פולין 2026</strong>
+    <span>הטיול עוד נבנה — וההתרגשות כבר כאן.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
